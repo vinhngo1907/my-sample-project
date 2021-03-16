@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+*{
+	box-sizing: border-box;
+}
+
+body{
+	background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+	color: #444;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	font-family: "Poppins", sans-serif;
+	margin: 0;
+}
+
+h1{
+	color: white;
+	font-size: 5rem;
+	/* text-align: center; */
+	font-weight: normal;
+}
+
+.container{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 600px;
+}
+
+.container form{
+	width: 600px;
+	max-width: 100%;
+	display: flex;
+	/* justify-content: space-between;
+	align-items: center; */
+	background-color: white;
+}
+
+.container form .input{
+	border: none;
+	width: 100%;
+	display: block;
+	padding: 0.5rem 1rem;
+	color: #444;
+	font-size: 2rem;
+	font-family: inherit;
+}
+.container form .input::placeholder{
+	color: #d5d5d5;
+}
+
+.container form .input:focus{
+	outline: none;
+}
+
+.container form .todo-button{
+	border: none;
+	padding: 0.88rem 1rem;
+	cursor: pointer;
+	font-size: 2rem;
+	color: rgb(255, 68, 0);
+	background-color: white;
+}
+
+.container form .todo-button:focus{
+	outline: none;
+}
+
+.select{
+	margin: 1rem;
+	position: relative;
+	overflow: hidden;
+}
+select{
+	color: #ff6747;
+	width: 20rem;
+	cursor: pointer;
+	padding: 1rem;
+}
+.select::after{
+	content: "\25BC";
+	background-color: #ff6747;
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 1rem;
+	pointer-events: none;
+}
+.container form .filter-todo .select:focus{
+	outline: none;
+}
+
+.container .todo-container{
+	width: 600px;
+}
+
+.container .todo-container .todo-list{
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+
+.todo-list .todo{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: white;
+	margin-top: 1rem;
+}
+
+.todo-list .todo li{
+	padding: 1rem 2rem;
+	color: rgb(52, 51, 51);
+	font-weight: bold;
+	font-size: 1.3rem;
+}
+.todo-list .todo li.completed{
+	text-decoration: line-through;
+	color: #b6b6b6;
+}
+.todo-list .todo .tools{
+	background-color: transparent;
+}
+
+.todo-list .todo .tools button{
+	color: white;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.todo-list .todo .tools button:focus{
+	outline: none;
+}
+
+.fa-check{
+	background-color: rgb(35, 191, 154);
+	padding: 1rem;
+}
+.fa-check:hover{
+	background-color: rgb(29, 155, 126);
+}
+
+.fa-trash{
+	background-color: rgb(255, 68, 0);
+	padding: 1rem;
+}
+
+.fa-trash:hover{
+	background-color: rgb(236, 67, 5);
+}
